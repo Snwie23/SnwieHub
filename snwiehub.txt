@@ -1,0 +1,342 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local gui = Instance.new("ScreenGui")
+local FrameROUNDED = Instance.new("Frame")
+local Background = Instance.new("ImageLabel")
+local SecondFrame = Instance.new("Frame")
+local Background_2 = Instance.new("ImageLabel")
+local SnwieHub = Instance.new("TextLabel")
+local BoxingSim2 = Instance.new("TextLabel")
+local Line1 = Instance.new("TextLabel")
+local Credits = Instance.new("TextLabel")
+local Credits_2 = Instance.new("TextLabel")
+local Close = Instance.new("TextButton")
+local StrengthGained = Instance.new("TextButton")
+local Farm = Instance.new("TextButton")
+local DelHub = Instance.new("TextButton")
+local FPS = Instance.new("TextButton")
+local AntiAFK = Instance.new("TextButton")
+local TpToRumble = Instance.new("TextButton")
+local CountWeights = Instance.new("TextButton")
+local MCGFARM = Instance.new("TextButton")
+local Equip = Instance.new("TextButton")
+local TextButton = Instance.new("TextButton")
+
+--Properties:
+
+gui.Parent = game.CoreGui
+
+game:GetService("StarterGui"):SetCore("SendNotification",{
+        Title = "Welcome To SnwieHub!",
+        Text = "Credits! MCG904YT#1317",
+        Duration=10  --the 8 represents the number of seconds the notification will be on screen, change it if you wish.
+    })
+
+local UE=game:GetService("UserInputService")
+UE.InputBegan:connect(function(input)
+	if input.KeyCode==Enum.KeyCode.E then
+		FrameROUNDED.Visible=not FrameROUNDED.Visible
+	end
+end)
+
+FrameROUNDED.Name = "Frame [ROUNDED]"
+FrameROUNDED.Parent = gui
+FrameROUNDED.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+FrameROUNDED.BackgroundTransparency = 1.000
+FrameROUNDED.BorderColor3 = Color3.fromRGB(56, 56, 56)
+FrameROUNDED.Position = UDim2.new(0.24545455, 0, 0.379581153, 0)
+FrameROUNDED.Size = UDim2.new(0, 439, 0, 287)
+FrameROUNDED.Active = true
+FrameROUNDED.Draggable = true
+
+Background.Name = "Background"
+Background.Parent = FrameROUNDED
+Background.BackgroundTransparency = 1.000
+Background.Position = UDim2.new(0, 0, 0.216027871, 0)
+Background.Size = UDim2.new(1, 0, 0.783972144, 0)
+Background.Image = "rbxassetid://3570695787"
+Background.ImageColor3 = Color3.fromRGB(57, 57, 57)
+Background.ScaleType = Enum.ScaleType.Slice
+Background.SliceCenter = Rect.new(100, 100, 100, 100)
+Background.SliceScale = 0.120
+
+SecondFrame.Name = "SecondFrame"
+SecondFrame.Parent = FrameROUNDED
+SecondFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+SecondFrame.BackgroundTransparency = 1.000
+SecondFrame.BorderColor3 = Color3.fromRGB(75, 75, 75)
+SecondFrame.Position = UDim2.new(0.0372168273, 0, 0.0557491295, 0)
+SecondFrame.Size = UDim2.new(0, 167, 0, 260)
+
+Background_2.Name = "Background"
+Background_2.Parent = SecondFrame
+Background_2.BackgroundTransparency = 1.000
+Background_2.Position = UDim2.new(-0.142083809, 0, 0.176923081, 0)
+Background_2.Size = UDim2.new(1, 0, 0.865384638, 0)
+Background_2.Image = "rbxassetid://3570695787"
+Background_2.ImageColor3 = Color3.fromRGB(75, 75, 75)
+Background_2.ScaleType = Enum.ScaleType.Slice
+Background_2.SliceCenter = Rect.new(100, 100, 100, 100)
+Background_2.SliceScale = 0.120
+
+SnwieHub.Name = "SnwieHub"
+SnwieHub.Parent = FrameROUNDED
+SnwieHub.BackgroundColor3 = Color3.fromRGB(75, 75, 75)
+SnwieHub.BorderColor3 = Color3.fromRGB(75, 75, 75)
+SnwieHub.Position = UDim2.new(0.0533980466, 0, 0.233449474, 0)
+SnwieHub.Size = UDim2.new(0, 99, 0, 20)
+SnwieHub.Font = Enum.Font.SourceSans
+SnwieHub.Text = "SnwieHub! V1"
+SnwieHub.TextColor3 = Color3.fromRGB(255, 255, 255)
+SnwieHub.TextSize = 25.000
+
+BoxingSim2.Name = "Welcome! "
+BoxingSim2.Parent = FrameROUNDED
+BoxingSim2.BackgroundColor3 = Color3.fromRGB(75, 75, 75)
+BoxingSim2.BorderColor3 = Color3.fromRGB(75, 75, 75)
+BoxingSim2.Position = UDim2.new(0.0533980466, 0, 0.303135902, 0)
+BoxingSim2.Size = UDim2.new(0, 99, 0, 13)
+BoxingSim2.Font = Enum.Font.SourceSans
+BoxingSim2.Text = "Boxing Sim 2"
+BoxingSim2.TextColor3 = Color3.fromRGB(255, 255, 255)
+BoxingSim2.TextSize = 18.000
+BoxingSim2.Text=game:GetService("Players").LocalPlayer.Name
+
+Line1.Name = "Line1"
+Line1.Parent = FrameROUNDED
+Line1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Line1.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Line1.Position = UDim2.new(-0.0168332607, 0, 0.369337976, 0)
+Line1.Size = UDim2.new(0, 165, 0, 0)
+Line1.Font = Enum.Font.SourceSans
+Line1.Text = ""
+Line1.TextColor3 = Color3.fromRGB(0, 0, 0)
+Line1.TextSize = 14.000
+
+Credits.Name = "Credits!"
+Credits.Parent = FrameROUNDED
+Credits.BackgroundColor3 = Color3.fromRGB(75, 75, 75)
+Credits.BorderColor3 = Color3.fromRGB(75, 75, 75)
+Credits.Position = UDim2.new(0.0533980578, 0, 0.397212535, 0)
+Credits.Size = UDim2.new(0, 99, 0, 25)
+Credits.Font = Enum.Font.SourceSans
+Credits.Text = "Credits!"
+Credits.TextColor3 = Color3.fromRGB(255, 255, 255)
+Credits.TextSize = 25.000
+
+Credits_2.Name = "Credits!"
+Credits_2.Parent = FrameROUNDED
+Credits_2.BackgroundColor3 = Color3.fromRGB(75, 75, 75)
+Credits_2.BorderColor3 = Color3.fromRGB(75, 75, 75)
+Credits_2.Position = UDim2.new(0.0533980578, 0, 0.484320581, 0)
+Credits_2.Size = UDim2.new(0, 99, 0, 25)
+Credits_2.Font = Enum.Font.SourceSans
+Credits_2.Text = "MCG904YT#1317"
+Credits_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Credits_2.TextSize = 18.000
+
+Close.Name = "Close"
+Close.Parent = FrameROUNDED
+Close.BackgroundColor3 = Color3.fromRGB(57, 57, 57)
+Close.BorderColor3 = Color3.fromRGB(57, 57, 57)
+Close.Position = UDim2.new(0.906620622, 0, 0.233449489, 0)
+Close.Size = UDim2.new(0, 31, 0, 25)
+Close.Font = Enum.Font.SourceSans
+Close.Text = "X"
+Close.TextColor3 = Color3.fromRGB(255, 255, 255)
+Close.TextSize = 30.000
+Close.MouseButton1Down:connect(function()
+	FrameROUNDED:Destroy()
+end)
+
+StrengthGained.Name = "Strength Gained"
+StrengthGained.Parent = FrameROUNDED
+StrengthGained.BackgroundColor3 = Color3.fromRGB(75, 75, 75)
+StrengthGained.BorderColor3 = Color3.fromRGB(75, 75, 75)
+StrengthGained.Position = UDim2.new(0.0145631135, 0, 0.857142806, 0)
+StrengthGained.Size = UDim2.new(0, 148, 0, 35)
+StrengthGained.Font = Enum.Font.SourceSans
+StrengthGained.Text = "Strength Gained"
+StrengthGained.TextColor3 = Color3.fromRGB(255, 255, 255)
+StrengthGained.TextSize = 25.000
+local str = game:GetService("Players").LocalPlayer.leaderstats.Strength;
+local curvalue = str.Value;
+local earned = 0;
+str:GetPropertyChangedSignal("Value"):Connect(function()
+	local delta = (str.Value - curvalue);
+	earned += delta;
+	StrengthGained.Text = earned;
+	curvalue = str.Value;	
+end)
+
+Farm.Name = "Farm"
+Farm.Parent = FrameROUNDED
+Farm.BackgroundColor3 = Color3.fromRGB(57, 57, 57)
+Farm.BorderColor3 = Color3.fromRGB(57, 57, 57)
+Farm.Position = UDim2.new(0.414884508, 0, 0.261324048, 0)
+Farm.Size = UDim2.new(0, 96, 0, 33)
+Farm.Font = Enum.Font.SourceSans
+Farm.Text = "Farm"
+Farm.TextColor3 = Color3.fromRGB(255, 255, 255)
+Farm.TextSize = 20.000
+Farm.MouseButton1Down:connect(function()
+	_G.farm = true
+	while _G.farm do
+		wait(0.6)
+		for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+			if v.Name == "Double Weight" then v:Activate() end
+		end
+	end
+end)
+
+DelHub.Name = "DelHub"
+DelHub.Parent = FrameROUNDED
+DelHub.BackgroundColor3 = Color3.fromRGB(57, 57, 57)
+DelHub.BorderColor3 = Color3.fromRGB(57, 57, 57)
+DelHub.Position = UDim2.new(0.66317606, 0, 0.43554005, 0)
+DelHub.Size = UDim2.new(0, 96, 0, 33)
+DelHub.Font = Enum.Font.SourceSans
+DelHub.Text = "Del-Hub"
+DelHub.TextColor3 = Color3.fromRGB(255, 255, 255)
+DelHub.TextSize = 20.000
+DelHub.MouseButton1Down:connect(function()
+	game:GetService("Players").LocalPlayer.PlayerGui.HUD:Destroy()
+end)
+
+FPS.Name = "FPS"
+FPS.Parent = FrameROUNDED
+FPS.BackgroundColor3 = Color3.fromRGB(57, 57, 57)
+FPS.BorderColor3 = Color3.fromRGB(57, 57, 57)
+FPS.Position = UDim2.new(0.66317606, 0, 0.630662024, 0)
+FPS.Size = UDim2.new(0, 96, 0, 33)
+FPS.Font = Enum.Font.SourceSans
+FPS.Text = "FPS"
+FPS.TextColor3 = Color3.fromRGB(255, 255, 255)
+FPS.TextSize = 20.000
+FPS.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/MCG904YT/fps/main/fps'))()
+end)
+
+AntiAFK.Name = "AntiAFK"
+AntiAFK.Parent = FrameROUNDED
+AntiAFK.BackgroundColor3 = Color3.fromRGB(57, 57, 57)
+AntiAFK.BorderColor3 = Color3.fromRGB(57, 57, 57)
+AntiAFK.Position = UDim2.new(0.66317606, 0, 0.811846673, 0)
+AntiAFK.Size = UDim2.new(0, 96, 0, 33)
+AntiAFK.Font = Enum.Font.SourceSans
+AntiAFK.Text = "Anti-Afk"
+AntiAFK.TextColor3 = Color3.fromRGB(255, 255, 255)
+AntiAFK.TextSize = 20.000
+AntiAFK.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/MCG904YT/afk/main/afk'))()
+end)
+
+TpToRumble.Name = "Tp To Rumble"
+TpToRumble.Parent = FrameROUNDED
+TpToRumble.BackgroundColor3 = Color3.fromRGB(57, 57, 57)
+TpToRumble.BorderColor3 = Color3.fromRGB(57, 57, 57)
+TpToRumble.Position = UDim2.new(0.415588498, 0, 0.630661964, 0)
+TpToRumble.Size = UDim2.new(0, 96, 0, 33)
+TpToRumble.Font = Enum.Font.SourceSans
+TpToRumble.Text = "Tp-Rumble"
+TpToRumble.TextColor3 = Color3.fromRGB(255, 255, 255)
+TpToRumble.TextSize = 20.000
+TpToRumble.MouseButton1Down:connect(function()
+	game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(-1977.9436, 510, -5295.2124, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+end)
+
+CountWeights.Name = "Count Weights"
+CountWeights.Parent = FrameROUNDED
+CountWeights.BackgroundColor3 = Color3.fromRGB(57, 57, 57)
+CountWeights.BorderColor3 = Color3.fromRGB(57, 57, 57)
+CountWeights.Position = UDim2.new(0.415588498, 0, 0.811846673, 0)
+CountWeights.Size = UDim2.new(0, 96, 0, 33)
+CountWeights.Font = Enum.Font.SourceSans
+CountWeights.Text = "Count Weights"
+CountWeights.TextColor3 = Color3.fromRGB(255, 255, 255)
+CountWeights.TextSize = 20.000
+CountWeights.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/MCG904YT/w/main/l'))()
+end)
+
+MCGFARM.Name = "MCG FARM"
+MCGFARM.Parent = FrameROUNDED
+MCGFARM.BackgroundColor3 = Color3.fromRGB(57, 57, 57)
+MCGFARM.BorderColor3 = Color3.fromRGB(57, 57, 57)
+MCGFARM.Position = UDim2.new(0.0291262139, 0, 0.581881523, 0)
+MCGFARM.Size = UDim2.new(0, 130, 0, 33)
+MCGFARM.Font = Enum.Font.SourceSans
+MCGFARM.Text = "MCG Script!"
+MCGFARM.TextColor3 = Color3.fromRGB(255, 255, 255)
+MCGFARM.TextSize = 20.000
+MCGFARM.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/MCG904YT/Versions/main/Select'))()
+end)
+
+Equip.Name = "Equip"
+Equip.Parent = FrameROUNDED
+Equip.BackgroundColor3 = Color3.fromRGB(57, 57, 57)
+Equip.BorderColor3 = Color3.fromRGB(57, 57, 57)
+Equip.Position = UDim2.new(0.414884478, 0, 0.43554008, 0)
+Equip.Size = UDim2.new(0, 96, 0, 33)
+Equip.Font = Enum.Font.SourceSans
+Equip.Text = "Equip"
+Equip.TextColor3 = Color3.fromRGB(255, 255, 255)
+Equip.TextSize = 20.000
+Equip.MouseButton1Down:connect(function()
+	_G.Equip = true
+	while _G.Equip do
+		wait()
+		for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+			if v.Name == "Double Weight" then v:Activate()
+				v.Parent = game.Players.LocalPlayer.Character
+			end
+		end
+	end
+end)
+
+TextButton.Parent = FrameROUNDED
+TextButton.BackgroundColor3 = Color3.fromRGB(75, 75, 75)
+TextButton.BorderColor3 = Color3.fromRGB(75, 75, 75)
+TextButton.Position = UDim2.new(0.0145631414, 0, 0.735191584, 0)
+TextButton.Size = UDim2.new(0, 148, 0, 22)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = ""
+TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.TextSize = 25.000
+local FullStrength = game.ReplicatedStorage.Data[game.Players.LocalPlayer.Name].Strength
+FullStrength:GetPropertyChangedSignal("Value"):Connect(function(value)
+	TextButton.Text = FullStrength.Value
+end)
+
+local input = TextButton
+local output = TextButton
+input.FocusLost:connect(function(enterPressed)
+	if enterPressed and #input.Text >= 2 then 
+
+		local player = nil
+		for i,v in pairs(game:GetService("Players"):GetChildren()) do
+			if v.Name:lower():sub(1, #input.Text) == input.Text:lower() or
+				v.DisplayName:lower():sub(1, #input.Text) == input.Text:lower()
+			then
+				player = v.Name
+
+			end
+		end
+		if player then
+			input.Text = player
+			local Data = game:GetService("ReplicatedStorage").Data
+			local Player_Folder = Data:FindFirstChild(player) or Data:WaitForChild(player,30)
+			Full_Strength = Player_Folder:FindFirstChild("Strength") or Player_Folder:WaitForChild("Strength",30)
+		end
+	end
+end)
+
+game:GetService'RunService'.Stepped:Connect(function()
+	if Full_Strength then
+		output.Text = Full_Strength.Value
+	end
+end)
